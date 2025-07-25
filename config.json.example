@@ -1,0 +1,10 @@
+{
+  "schedule_cron": "0 9 * * *",
+  "queries": [
+    {
+      "name": "sales_by_region",
+      "sql": "SELECT region, SUM(amount) AS total_sales FROM sales WHERE stakeholder_email = :email GROUP BY region ORDER BY region",
+      "recipients": ["user1@example.com"]
+    }
+  ]
+}
